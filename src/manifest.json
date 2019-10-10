@@ -1,0 +1,40 @@
+{
+    "name": "Epub Reader",
+    "version": "0.1",
+    "description": "The epub reader extension from Future Press",
+    "permissions": [
+		"tabs",
+		"storage", 
+		"downloads", 
+		"contextMenus", 
+		"webNavigation", 
+		"webRequest", 
+		"webRequestBlocking", 
+		"<all_urls>"
+    ],
+    "background": {
+		"scripts": [
+			"js/background.js",
+			"js/menu.js"
+		]
+	},
+    "homepage_url": "http://futurepress.org",
+    "options_page": "options.html",
+    "icons": {
+        "16": "img/icon_16.png",
+        "32": "img/icon_32.png",
+        "48": "img/icon_48.png"
+    },
+	"manifest_version": 2,
+	"web_accessible_resources": [ 
+		"css/*.css",
+		"font/fontello.eot",
+		"font/fontello.svg",
+		"font/fontello.ttf",
+		"font/fontello.woff",
+		"img/*.png",
+		"img/*.gif",
+		"js/*.js",
+		"index.html" 
+	]
+}
