@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/intity/epubreader-chrome/issues"
   },
-  "homepage": "https://github.com/intity/epubreader-chrome#readme"
+  "homepage": "https://github.com/intity/epubreader-chrome#readme",
+  "dependencies": {
+    "epubjs": "^0.3.88"
+  }
 }
