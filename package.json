@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/intity/epubreader-chrome#readme",
   "dependencies": {
-    "epubjs": "^0.3.88"
+    "epubjs": "^0.3.88",
+    "epubjs-reader": "git+https://github.com/intity/epubjs-reader.git"
   }
 }
