@@ -21,6 +21,7 @@
     "epubjs-reader": "git+https://github.com/intity/epubjs-reader.git"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^7.0.0",
     "webpack": "^5.18.0"
   }
 }
