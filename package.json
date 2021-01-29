@@ -19,5 +19,8 @@
   "dependencies": {
     "epubjs": "^0.3.88",
     "epubjs-reader": "git+https://github.com/intity/epubjs-reader.git"
+  },
+  "devDependencies": {
+    "webpack": "^5.18.0"
   }
 }
