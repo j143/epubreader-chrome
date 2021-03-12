@@ -1,9 +1,6 @@
 "use strict";
 
-document.onreadystatechange = function () {
-
-    if (document.readyState !== "complete")
-        return;
+window.onload = function () {
 
     var storage = new EPUBJS.storage();
     var upload = document.getElementById('upload');
@@ -18,15 +15,16 @@ document.onreadystatechange = function () {
             var fr = new FileReader();
             fr.onload = function (e) {
 
-                window.reader = ePubReader(e.target.result, { restore: true });
+                storage.clear();
+                storage.set(e.target.result, function() {
 
-                storage.init(function () {
-
-                    storage.clear();
-                    storage.set(e.target.result);
+                    window.reader = ePubReader(e.target.result, { restore: true });
                 });
             };
             fr.readAsArrayBuffer(e.target.files[0]);
+            fr.onerror = function(e) {
+                console.error(e);
+            };
 
             if (location.href.includes("?bookPath")) {
             
@@ -39,7 +37,7 @@ document.onreadystatechange = function () {
             alert("Your browser does not support the required features.\n" +
                 "Please use a modern browser such as Google Chrome, or Mozilla Firefox.");
         }
-    });
+    }, false);
 
     if (location.href.includes("?bookPath")) {
 
