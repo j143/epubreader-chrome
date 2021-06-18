@@ -2,7 +2,7 @@ const path = require('path');
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     output: {
         path: path.resolve(__dirname, 'dist')
     },
@@ -12,7 +12,8 @@ module.exports = {
                 {
                     from: 'node_modules/epubjs-reader/reader',
                     to: './',
-                    toType: 'dir'
+                    toType: 'dir',
+                    force: true
                 },
                 {
                     from: 'src', 
