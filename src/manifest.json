@@ -1,7 +1,7 @@
 {
     "name": "Epub Reader",
     "version": "0.1",
-    "description": "The epub reader extension from Future Press",
+    "description": "The epub reader extension",
     "permissions": [
 		"tabs",
 		"storage", 
@@ -18,7 +18,7 @@
 			"js/menu.js"
 		]
 	},
-    "homepage_url": "http://futurepress.org",
+    "homepage_url": "https://github.com/j143/epubreader",
     "options_page": "options.html",
     "icons": {
         "16": "img/icon_16.png",
